@@ -19,5 +19,9 @@ app.get('/games', (req, res) => {
     res.sendFile(join(__dirname, 'public', 'games.html'))
 })
 
+app.post('/movies', (req, res) => {
+    res.send('POST request')
+})
+
 app.listen(3000)
 
