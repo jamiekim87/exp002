@@ -1,15 +1,23 @@
 const express = require('express')
-const path = require('path')
+const { join } = require('path')
 
 const app = express()
 
-app.get('/test', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+app.get('/movies', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'movies.html'))
 })
 
+app.get('/songs', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'songs.html'))
+})
 
+app.get('/food', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'food.html'))
+})
 
-
+app.get('/games', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'games.html'))
+})
 
 app.listen(3000)
 
